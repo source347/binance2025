@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Beginner's Guide: How to Buy Your First Bitcoin (2025)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables and Global Styles */
+        :root {
+            --binance-green: #38a169; /* Primary action color */
+            --binance-yellow: #f6d04d; /* Highlight color */
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+            --container-width: 850px;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+        .guide-container {
+            width: 100%;
+            max-width: var(--container-width);
+            background-color: white;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            margin: 30px 15px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            color: var(--binance-green);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+        strong {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Call to Action (CTA) Button */
+        .cta-button {
+            display: block;
+            width: 90%;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: var(--binance-green);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
+            transition: all 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #277b4d;
+            box-shadow: 0 6px 20px rgba(56, 161, 105, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Referral Code Box */
+        .referral-box {
+            background-color: var(--bg-light);
+            border: 2px dashed var(--binance-yellow);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .code-display {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d97706; /* Darker yellow/orange */
+            background-color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid #fde68a;
+            user-select: all; /* Allows easy manual selection */
+        }
+        .copy-btn {
+            padding: 8px 15px;
+            background-color: var(--binance-yellow);
+            color: var(--text-dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #f7b824;
+        }
+        .copy-message {
+            color: var(--binance-green);
+            font-weight: 600;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Step List */
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .step-list li {
+            margin-bottom: 30px;
+            padding-left: 50px;
+            position: relative;
+            background: #ffffff;
+            border-left: 3px solid var(--border-color);
+        }
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: "Step " counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            background-color: var(--binance-green);
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+            transform: translateX(-100%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .step-list li h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: var(--binance-green);
+        }
+
+        /* Utility */
+        .text-center { text-align: center; }
+        .secure-badge {
+            font-size: 0.9rem;
+            color: #10b981;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .cta-button { font-size: 1.2rem; padding: 12px 20px; width: 100%; }
+            .step-list li { padding-left: 20px; }
+            .step-list li::before { 
+                font-size: 1rem;
+                width: 80px;
+                transform: translateX(-120%);
+                border-radius: 0;
+                height: 25px;
+                line-height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+        <!-- HEADER -->
+        <h1>How to Buy Your First Bitcoin on Binance: A Step-by-Step 2025 Guide for Beginners</h1>
+        <p class="text-center" style="font-size: 1.1em; color: var(--binance-green);">
+            The simplest, most trusted way to enter the cryptocurrency market.
+        </p>
+        <p>
+            Welcome to the definitive guide for buying Bitcoin on **Binance**, the world's largest cryptocurrency exchange. This guide is built for absolute beginners and walks you through the entire process, from setting up your account to making your first purchase in **2025**.
+        </p>
+
+        <!-- PRIMARY CALL TO ACTION (Updated Link) -->
+        <a id="mainCta" href="https://www.binance.com/en/register?ref=40743169" class="cta-button">
+            🚀 Click Here to Create Your FREE Binance Account!
+        </a>
+        <div class="text-center secure-badge">Trusted by over 700 million users worldwide.</div>
+
+        <!-- REFERRAL CODE BOX (Updated Code) -->
+        <div class="referral-box">
+            <p style="margin: 0; color: var(--text-dark);">
+                **Bonus Tip:** Use our exclusive referral code during sign-up to unlock a fee rebate on your trades!
+            </p>
+            <span class="code-display" id="referralCode">40743169</span>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            <div id="copyMessage" class="copy-message"></div>
+        </div>
+
+        <!-- STEP-BY-STEP GUIDE -->
+        <h2>The 4 Essential Steps to Buying BTC</h2>
+        <ul class="step-list">
+            <li>
+                <h3>Account Registration & Security</h3>
+                <p>
+                    Click the **CTA button** above to start the registration process. You can sign up using your email, phone number, or Google account. Once registered, immediately enable **Two-Factor Authentication (2FA)** using the Google Authenticator app. This is crucial for securing your future investments.
+                </p>
+            </li>
+            <li>
+                <h3>Identity Verification (KYC)</h3>
+                <p>
+                    Binance is a regulated exchange, requiring **Know Your Customer (KYC)** verification to allow you to trade fiat currency (like USD, EUR, etc.) and withdraw funds. This involves submitting government-issued ID (passport or driver's license) and a clear selfie. The process usually takes a few minutes and is required for security and legal compliance.
+                </p>
+            </li>
+            <li>
+                <h3>Funding Your Account (Deposit)</h3>
+                <p>
+                    Navigate to the **Wallet** section and select **Deposit**. You have two main options:
+                    <ol>
+                        <li>**Fiat Deposit:** Transfer funds directly from your bank account (usually the cheapest but slowest) or use a credit/debit card (faster, but often carries a higher fee).</li>
+                        <li>**Crypto Deposit:** If you already own crypto on another platform, you can transfer it to your unique Binance wallet address.</li>
+                    </ol>
+                    We recommend starting with a small **fiat deposit** to get familiar with the process.
+                </p>
+            </li>
+            <li>
+                <h3>Making the Purchase (Convert or Spot)</h3>
+                <p>
+                    Once your deposit is confirmed, you are ready to buy Bitcoin (BTC)! Binance offers two simple ways:
+                    <ul>
+                        <li>**The "Convert" Tool (Easiest):** This is ideal for beginners. Simply select the currency you deposited (e.g., USD) and the crypto you want (BTC). Enter the amount, and Binance gives you a simple quote. Click **Convert** to execute the trade instantly.</li>
+                        <li>**The "Spot Trading" Interface:** This offers more complex options like limit orders, but for your first purchase, the **Convert** tool is far simpler and less intimidating.</li>
+                    </ul>
+                    Congratulations, you now own Bitcoin!
+                </p>
+            </li>
+        </ul>
+
+        <!-- FINAL CALL TO ACTION (Updated Link) -->
+        <h2 class="text-center">Ready to Take the Next Step?</h2>
+        <a id="finalCta" href="https://www.binance.com/en/register?ref=40743169" class="cta-button">
+            Start Your Crypto Journey with Binance Now
+        </a>
+
+        <p class="text-center" style="font-size: 0.85em; color: #6c757d; margin-top: 30px;">
+            Disclaimer: Cryptocurrency trading involves risk. This guide is for educational purposes only and does not constitute financial advice.
+        </p>
+
+    </div>
+
+    <!-- JavaScript for Copy-to-Clipboard Functionality (Updated Success Message) -->
+    <script>
+        function copyCode() {
+            const referralCode = document.getElementById('referralCode').textContent;
+            const messageElement = document.getElementById('copyMessage');
+            
+            // Use execCommand('copy') for better compatibility in iframe environments
+            const tempInput = document.createElement('input');
+            tempInput.value = referralCode;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                // Updated success message to show the correct code
+                messageElement.textContent = "Code Copied! (40743169)";
+                messageElement.style.opacity = 1;
+                setTimeout(() => {
+                    messageElement.style.opacity = 0;
+                }, 2000);
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+                messageElement.textContent = "Copy failed. Please select and copy manually.";
+                messageElement.style.opacity = 1;
+            } finally {
+                document.body.removeChild(tempInput);
+            }
+        }
+    </script>
+
+</body>
+</html>
